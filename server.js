@@ -33,20 +33,20 @@ app.get('/addcourse', function(req, res) {
   res.render('pages/coursesAdminLink');
 });
 
-//tried making the code write to json file failed
+// tried making the code write to json file failed
 
-// // This is a RESTful GET web service
-// app.get('/students', (request, response) => {
-//     data.sort((a, b) => (a.name > b.name) ? 1 : -1 );
-//     response.send(data);
-// });
+// This is a RESTful GET web service
+app.get('/students', (request, response) => {
+    data.sort((a, b) => (a.name > b.name) ? 1 : -1 );
+    response.send(data);
+});
 
-// // This is a RESTful POST web service
-// app.post('/students', jsonParser, (request, response) => {
-//     data.push(request.body);
-//     fs.writeFileSync(fileName, JSON.stringify(data, null, 2));
-//     response.end();
-// });
+// This is a RESTful POST web service
+app.post('/students', jsonParser, (request, response) => {
+    data.push(request.body);
+    fs.writeFileSync(fileName, JSON.stringify(data, null, 2));
+    response.end();
+});
 
 
 
