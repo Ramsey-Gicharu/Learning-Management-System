@@ -9,13 +9,18 @@ app.use(express.static(__dirname + '/public'));
 
 // use res.render to load up an ejs view file
 
-// adminPage
+// welcomePage
 app.get('/', function(req, res) {
+  res.render('pages/welcomePage');
+});
+
+// adminPage
+app.get('/admin', function(req, res) {
   res.render('pages/adminPage');
 });
 
 // userPage
-app.get('/User', function(req, res) {
+app.get('/user', function(req, res) {
   res.render("pages/userView", {
         user: "John Doe",
     });
