@@ -15,6 +15,31 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <h1>ADMIN LANDING PAGE</h1>
     <h3>Welcome Admin</h3>
     <!-- Grid layout for the admin page -->
@@ -60,31 +85,45 @@
             </div>
             <!-- Add users column -->
             <div class="col">
-                <!-- Add users Collapse button -->
-                <p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        Add Users
-                    </button>
-                </p>
-                <!-- collapse form to add users -->
-                <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                        <!-- Form to add an user -->
-                        <form>
-                            <div class="mb-3">
-                                <label for="userName" class="form-label">User Name</label>
-                                <input type="Text" class="form-control" id="userName">
-                            </div>
-                            <div class="mb-3">
-                                <label for="userEmail" class="form-label">User Email</label>
-                                <input type="email" class="form-control" id="userEmail">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                <!-- Button trigger modal popup-->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal">
+                    Add Users
+                </button>
 
+                <!-- Modal popup -->
+                <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="userModal">User Form</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="userName" class="form-label">User Name</label>
+                                        <input type="text" class="form-control" id="userName">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userEmail" class="form-label">User Email</label>
+                                        <input type="email" class="form-control" id="userEmail">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userPassword" class="form-label">User Password</label>
+                                        <input type="password" class="form-control" id="userPassword">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -122,31 +161,70 @@
             </div>
         </div>
         <div class="col">
-            <p>
-                <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Add Courses
-                </button>
-            </p>
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="courseCode" class="form-label">Course Code</label>
-                            <input type="text" class="form-control" id="courseCode">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#coursesModal">
+                Add Courses
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="coursesModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="coursesModal">Courses Form</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="mb-3">
-                            <label for="courseName" class="form-label">Course Name</label>
-                            <input type="text" class="form-control" id="courseName">
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="courseCode" class="form-label">Course Code (Student)</label>
+                                                <input type="text" class="form-control" id="courseCodeStudent">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="courseName" class="form-label">Course Name (Student)</label>
+                                                <input type="text" class="form-control" id="courseNameStudent">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="courseDesc" class="form-label">Course Desc (Student)</label>
+                                                <input type="text" class="form-control" id="courseDescStudent">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                    <div class="col">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="courseCode" class="form-label">Course Code
+                                                    (Lecturer)</label>
+                                                <input type="text" class="form-control" id="courseCodeLecturer">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="courseName" class="form-label">Course Name
+                                                    (Lecturer)</label>
+                                                <input type="text" class="form-control" id="courseNameLecturer">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="courseDesc" class="form-label">Course Desc
+                                                    (Lecturer)</label>
+                                                <input type="text" class="form-control" id="courseDescLecturer">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="mb-3">
-                            <label for="courseDesc" class="form-label">Course Desc</label>
-                            <input type="text" class="form-control" id="courseDesc">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 
