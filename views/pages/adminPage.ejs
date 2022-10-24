@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- google font CDN -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,500&display=swap"
         rel="stylesheet">
 
     <!-- bootstrap CDN  CSS-->
@@ -28,11 +27,11 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg ">
         <div class=" container-fluid">
             <!-- Navbar Brand Logo -->
             <a class="navbar-brand" href="#">
-                <img src="https://api.logo.com/api/v2/images?format=webp&logo=logo_002d86ef-84c9-4f8f-b37c-810b27b7c62d&width=1000&height=750&margins=166&fit=contain&u=1666516351"
+                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3N8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
                     alt="" width="50" height="50">
             </a>
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -58,7 +57,7 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form>
+                                        <form id="userDetails">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text" id="netId">Net Id</span>
                                                 <input type="text" class="form-control" placeholder="Net Id"
@@ -71,14 +70,16 @@
                                                 <input type="text" aria-label="Last name" class="form-control">
                                             </div>
                                             <div class="input-group mb-3">
-                                                <span class="input-group-text" id="userEmail">User Email</span>
-                                                <input type="email" class="form-control" placeholder="userEmail"
-                                                    aria-label="User Email" aria-describedby="userEmail">
+                                                <span class="input-group-text">User Email</span>
+                                                <input type="email" id="userEmail" class="form-control"
+                                                    placeholder="userEmail" aria-label="User Email"
+                                                    aria-describedby="userEmail">
                                             </div>
                                             <div class="input-group mb-3">
-                                                <span class="input-group-text" id="userPassword">User Password</span>
-                                                <input type="email" class="form-control" placeholder="User Password"
-                                                    aria-label="User Password" aria-describedby="userPassword">
+                                                <span class="input-group-text" User Password</span>
+                                                    <input type="email" id="userPassword" class="form-control"
+                                                        placeholder="User Password" aria-label="User Password"
+                                                        aria-describedby="userPassword">
                                             </div>
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text" for="inputGroupSelect01">Role</label>
@@ -91,21 +92,124 @@
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text"
                                                     for="inputGroupSelect01">Lecturer</label>
-                                                <select class="form-select" id="inputGroupSelect01">
+                                                <select class="form-select" id="Lecturer">
                                                     <option selected>Choose...</option>
-                                                    <option value="1">True</option>
-                                                    <option value="2">False</option>
+                                                    <option value="True">True</option>
+                                                    <option value="False">False</option>
                                                 </select>
                                             </div>
                                             <div class="input-group mb-3">
                                                 <label class="input-group-text" for="inputGroupSelect01">Student</label>
-                                                <select class="form-select" id="inputGroupSelect01">
+                                                <select class="form-select" id="Student">
                                                     <option selected>Choose...</option>
-                                                    <option value="1">True</option>
-                                                    <option value="2">False</option>
+                                                    <option value="True">True</option>
+                                                    <option value="False">False</option>
                                                 </select>
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <h3>Student Courses</h3>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 2030"
+                                                    id="StudentCourses1" name="studentCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 2030
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 2010"
+                                                    id="StudentCourses2" name="studentCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 2010
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 1060"
+                                                    id="StudentCourses3" name="studentCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 1060
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 1050"
+                                                    id="StudentCourses4" name="studentCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 1050
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 3065"
+                                                    id="StudentCourses5" name="studentCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 3065
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 4080"
+                                                    id="StudentCourses6" name="studentCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 4080
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 4088"
+                                                    id="StudentCourses7" name="studentCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 4088
+                                                </label>
+                                            </div>
+
+                                            <h3>Lecturer Courses</h3>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 2030"
+                                                    id="lecturerCourses1" name="lecturerCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 2030
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 2010"
+                                                    id="lecturerCourses2" name="lecturerCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 2010
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 1060"
+                                                    id="lecturerCourses3" name="lecturerCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 1060
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 1050"
+                                                    id="lecturerCourses4" name="lecturerCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 1050
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 3065"
+                                                    id="lecturerCourses5" name="lecturerCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 3065
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 4080"
+                                                    id="lecturerCourses6" name="lecturerCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 4080
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="APT 4088"
+                                                    id="lecturerCourses7" name="lecturerCourses">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    APT 4088
+                                                </label>
+                                            </div>
+
+                                            <button type="submit" id="userbtn" class="btn btn-primary"
+                                                onclick="test1()">Submit</button>
                                         </form>
                                     </div>
                                 </div>
@@ -129,7 +233,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <!-- Courses Form -->
-                                        <form>
+                                        <form id="courseDetails">
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text" id="courseCode">Course Code</span>
                                                 <input type="text" class="form-control" placeholder="Course Code"
@@ -157,8 +261,8 @@
                     <!-- Logout icon link -->
                     <li class="nav-item p-2 ">
                         <a class="nav-link" href="/">
-                            <img src="https://img.icons8.com/ios-filled/2x/exit.png" alt="logout" width="30"
-                                height="30">
+                            <img src="https://img.icons8.com/ios-filled/2x/exit.png""
+                                alt=" logout" width="30" height="30">
                         </a>
                     </li>
 
@@ -186,13 +290,13 @@
                     <!-- card body for users list -->
                     <div class="card card-body">
                         <!-- table list of users -->
-                        <table class="table">
+                        <table class="table" id="usersTable">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">User Name</th>
                                     <th scope="col">User Email</th>
-                                    <th scope="col">Courses Taught</th>
+                                    <th scope="col">Courses Teaching</th>
                                     <th scope="col">Courses Learning</th>
                                 </tr>
                             </thead>
@@ -239,7 +343,7 @@
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body  ">
                         <!-- view courses table -->
-                        <table class="table">
+                        <table class="table" id="coursesTable">
                             <!-- table headers -->
                             <thead>
                                 <tr>
@@ -275,8 +379,46 @@
     <!-- container end -->
 
 
+    <script type="text/javascript">
+
+
+
+        function test1() {
+            // // checkbox variables
+            // var studCourse = document.getElementById("StudentCourses1");
+            // var lecCourse = document.getElementById("lecturerCourses1");
+            //   var studCourse = document.getElementById("StudentCourses2");
+            var studentCourses = [];
+            var lecturerCourses = [];
+            var lecturerCheckbox = document.querySelectorAll('input[name="lecturerCourses"]:checked');
+            var studentCheckbox = document.querySelectorAll('input[name="studentCourses"]:checked');
+            for (var { studCheck, lecCheck } of { studentCheckbox, lecturerCheckbox }) {
+                studentCourses.push(studCheck.value);
+                lecturerCourses.push(lecCheck.value);
+            }
+            console.log(courses);
+
+
+
+            // drop down select values 
+            var Lec = document.getElementById("Lecturer");
+            var Stud = document.getElementById("Student");
+            var selectedTextLec = Lec.options[Lecturer.selectedIndex].innerHTML;
+            var selectedTextStud = Lec.options[Student.selectedIndex].innerHTML;
+            var selectedValueLec = Lec.value;
+            var selectedValueStud = Stud.value;
+
+            if (selectedValueLec == "True" && selectedValueStud == "True") {
+                alert(studentCourses + " " + lecturerCourses);
+            }
+        }
+
+    </script>
+
+
 
 </body>
+
 
 
 </html>
